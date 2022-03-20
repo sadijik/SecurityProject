@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+
+    <h1>Создать блог</h1>
+    <form th:action="@{/admin/add}" method="post">
+        <div></div>
+        <input type="text" name="topic" placeholder="Введите тему"/><br>
+        <input type="text" name="text" placeholder="Введите текст"/><br>
+        <div><input type="submit" value="добавить вопрос"/></div>
+    </form>
+    <a th:href="@{/admin}">
+        <button type="submit">Назад</button>
+    </a>
+</div>
+</body>
+</html>
+

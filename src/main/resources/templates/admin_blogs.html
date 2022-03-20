@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>список вопросов</h1>
+
+<div>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+    <div th:each="el:${blogAdmin}">
+        <h3 th:text="${el.topic}"></h3>
+        <p th:text="${el.text}"></p>
+        <a th:href="'/admin/'+${el.id}">
+            <button type="submit">Редактировать</button>
+        </a></br>
+
+    </div>
+    </br>
+    <a th:href="@{/admin/add}">
+        <button type="submit">Создать вопрос</button>
+    </a>
+</div>
+
+
+</body>
+</html>
